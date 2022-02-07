@@ -1,7 +1,7 @@
 # checkblueprint
 
 [![Build Status](https://github.com/craftslab/checkblueprint/workflows/CI/badge.svg?branch=main&event=push)](https://github.com/craftslab/checkblueprint/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/craftslab/checkblueprint/branch/main/graph/badge.svg?token=TH43EUERSY)](https://codecov.io/gh/craftslab/checkblueprint)
+[![codecov](https://codecov.io/gh/craftslab/checkblueprint/branch/main/graph/badge.svg?token=etdHpieNbG)](https://codecov.io/gh/craftslab/checkblueprint)
 [![Go Report Card](https://goreportcard.com/badge/github.com/craftslab/checkblueprint)](https://goreportcard.com/report/github.com/craftslab/checkblueprint)
 [![License](https://img.shields.io/github/license/craftslab/checkblueprint.svg)](https://github.com/craftslab/checkblueprint/blob/main/LICENSE)
 [![Release](https://img.shields.io/github/release/craftslab/checkblueprint.svg)](https://github.com/craftslab/checkblueprint/releases/latest)
