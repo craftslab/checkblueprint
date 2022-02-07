@@ -1,9 +1,11 @@
 # checkblueprint
 
-[![Actions Status](https://github.com/craftslab/checkblueprint/workflows/CI/badge.svg?branch=master&event=push)](https://github.com/craftslab/checkblueprint/actions?query=workflow%3ACI)
+[![Build Status](https://github.com/craftslab/checkblueprint/workflows/CI/badge.svg?branch=main&event=push)](https://github.com/craftslab/checkblueprint/actions?query=workflow%3ACI)
+[![codecov](https://codecov.io/gh/craftslab/checkblueprint/branch/main/graph/badge.svg?token=TH43EUERSY)](https://codecov.io/gh/craftslab/checkblueprint)
 [![Go Report Card](https://goreportcard.com/badge/github.com/craftslab/checkblueprint)](https://goreportcard.com/report/github.com/craftslab/checkblueprint)
-[![License](https://img.shields.io/github/license/craftslab/checkblueprint.svg?color=brightgreen)](https://github.com/craftslab/checkblueprint/blob/master/LICENSE)
-[![Tag](https://img.shields.io/github/tag/craftslab/checkblueprint.svg?color=brightgreen)](https://github.com/craftslab/checkblueprint/tags)
+[![License](https://img.shields.io/github/license/craftslab/checkblueprint.svg)](https://github.com/craftslab/checkblueprint/blob/main/LICENSE)
+[![Release](https://img.shields.io/github/release/craftslab/checkblueprint.svg)](https://github.com/craftslab/checkblueprint/releases/latest)
+[![Gitter chat](https://badges.gitter.im/craftslab/craftslab.png)](https://gitter.im/craftslab/craftslab)
 
 
 
@@ -15,25 +17,18 @@
 
 ## Prerequisites
 
-- Go >= 1.16.0
-
-
-
-## Build
-
-```bash
-git clone https://github.com/craftslab/checkblueprint.git
-
-cd checkblueprint
-make build
-```
+- Go >= 1.17.0
 
 
 
 ## Run
 
 ```bash
-./checkblueprint --config-file="config.yml" --output-file="output.json"
+git clone https://github.com/craftslab/checkblueprint.git
+
+cd checkblueprint
+version=latest make build
+./bin/checkblueprint --config-file="$PWD/config/config.yml"
 ```
 
 
@@ -44,8 +39,8 @@ make build
 git clone https://github.com/craftslab/checkblueprint.git
 
 cd checkblueprint
-docker build --no-cache -f Dockerfile -t craftslab/checkblueprint:latest .
-docker run craftslab/checkblueprint:latest /checkblueprint --config-file="/config.yml" --output-file="/output.json"
+version=latest make docker
+docker run -v "$PWD"/config:/tmp ghcr.io/craftslab/checkblueprint:latest --config-file="/tmp/config.yml"
 ```
 
 
@@ -53,25 +48,16 @@ docker run craftslab/checkblueprint:latest /checkblueprint --config-file="/confi
 ## Usage
 
 ```
-usage: checkblueprint --config-file=CONFIG-FILE [<flags>]
-
-Lint Flow
-
-Flags:
-  --help                     Show context-sensitive help (also try --help-long
-                             and --help-man).
-  --version                  Show application version.
-  --config-file=CONFIG-FILE  Config file (.yml)
-  --output-file=OUTPUT-FILE  Output file (.json|.txt|.xlsx)
+TBD
 ```
 
 
 
 ## Settings
 
-*checkblueprint* parameters can be set in the directory [config](https://github.com/craftslab/checkblueprint/blob/master/config).
+*checkblueprint* parameters can be set in the directory [config](https://github.com/craftslab/checkblueprint/blob/main/config).
 
-An example of configuration in [config.yml](https://github.com/craftslab/checkblueprint/blob/master/config/config.yml):
+An example of configuration in [config.yml](https://github.com/craftslab/checkblueprint/blob/main/config/config.yml):
 
 ```yaml
 TBD

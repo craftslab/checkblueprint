@@ -5,8 +5,8 @@ RUN apt update && \
     apt install -y upx
 RUN make build
 
-FROM gcr.io/distroless/base-debian10 AS production-stage
+FROM gcr.io/distroless/base-debian11 AS production-stage
 WORKDIR /
-COPY --from=build-stage /go/src/app/bin/* /
-COPY --from=build-stage /go/src/app/config/*.yml /
+COPY --from=build-stage /go/src/app/bin/checkblueprint /
 USER nonroot:nonroot
+ENTRYPOINT ["/checkblueprint"]
