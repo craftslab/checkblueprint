@@ -13,7 +13,7 @@
 package cmd
 
 import (
-	"io/ioutil"
+	"io"
 	"os"
 
 	"github.com/pkg/errors"
@@ -55,7 +55,7 @@ func initConfig(name string) (*config.Config, error) {
 		_ = fi.Close()
 	}()
 
-	buf, err := ioutil.ReadAll(fi)
+	buf, err := io.ReadAll(fi)
 	if err != nil {
 		return c, errors.Wrap(err, "failed to readall")
 	}
